@@ -1,0 +1,31 @@
+Algoritmo "troco_verificado"
+
+Var
+
+   preco, dinheiro, troco, Dinheirofaltante : real
+   quantidade : inteiro
+
+Inicio
+
+   escreva ("Preço unitário do produto: ")
+   leia (preco)
+   escreva ("Quantidade comprada: ")
+   leia (quantidade)
+   escreva ("Dinheiro recebido: ")
+   leia (dinheiro)
+   
+   se  dinheiro - (preco * quantidade) < 0 entao
+       Dinheirofaltante <- -1 * (dinheiro - (preco * quantidade))
+       escreva ("DINHEIRO INSUFICIENTE. FALTAM", Dinheirofaltante:6:2, " REAIS.")
+       
+   senao
+        troco <- dinheiro - preco * quantidade
+        escreva ("TROCO = ", troco:6:2)
+        
+   fimse
+   
+
+       
+
+
+Fimalgoritmo
